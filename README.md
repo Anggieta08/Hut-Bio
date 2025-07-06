@@ -8,23 +8,27 @@
 > [!NOTE]
 > - Buka VSCode dan Git Bash di folder project
 
+#### PERATURAN 1
+
 > [!CAUTION]
 > Biasakan sebelum memulai perubahan di local repository, pastikan Anda telah melakukan pull dari remote repository terlebih dahulu. Caranya:
-> - Masuk ke git bash yang tadi dibuka lalu ketikkan perintah:
->   - git fetch origin master -> enter
->   - git fetch origin backup -> enter
->   - git pull origin master -> enter
->   - git pull origin backup -> enter
+
+> [!TIP]
+> Masuk ke git bash yang tadi dibuka lalu ketikkan perintah:
+>  1. git fetch origin master -> enter
+>  2. git fetch origin backup -> enter
+>  3. git pull origin master -> enter
+>  4. git pull origin backup -> enter
 > Setelah itu developer boleh melakukan perubahan pada projek
 
-#### PERATURAN 1
+#### PERATURAN 2
+
 > [!CAUTION]
 > Setelah melakukan perubahan dan hasil nya fix dan aman, 
 > lakukan PUSH ke remote repository dengan cara:
 
-#### PERATURAN 2
 > [!TIP]
-> - Masuk ke git bash lalu ketikkan perintah:
+> Masuk ke git bash lalu ketikkan perintah:
 >   1. git add . -> enter
 >   2. git commit -m "_pesan commit **SESUAI PERUBAHAN**_" -> enter
 >   3. git push origin master -> enter
@@ -37,5 +41,8 @@
 > [!IMPORTANT]
 > setelah itu selesai, developer harus _melakukan peraturan 1_ lagi sebelum memulai perubahan baru.
 > _beri tahu rekan tim yang lain jika ada perubahan di discussion repo ini_
+
+> [!WARNING]
+> Selalu utamakan informasi sesama rekan tim
 
 
