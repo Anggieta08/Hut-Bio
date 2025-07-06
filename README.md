@@ -20,6 +20,7 @@
 >  2. git fetch origin backup (enter)
 >  3. git pull master master (enter)
 >  4. git pull backup master (enter)
+> 
 > Setelah itu developer boleh melakukan perubahan pada projek
 
 #### PERATURAN 2
