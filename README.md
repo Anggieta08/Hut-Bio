@@ -42,6 +42,7 @@
 
 > [!IMPORTANT]
 > setelah itu selesai, developer harus _melakukan peraturan 1_ lagi sebelum memulai perubahan baru.
+> 
 > _beri tahu rekan tim yang lain jika ada perubahan di discussion repo ini_
 
 > [!WARNING]
