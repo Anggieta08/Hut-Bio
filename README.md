@@ -34,16 +34,18 @@
 >   2. git commit -m "_pesan commit **SESUAI PERUBAHAN**_" (enter)
 >   3. git push origin master (enter)
 >   4. git push origin backup (enter)
->   5. git fetch origin master ->
->   6. git fetch origin backup ->
->   7. git pull origin master ->
->   8. git pull origin backup ->
+>   5. git fetch origin master (enter)
+>   6. git fetch origin backup (enter)
+>   7. git pull origin master (enter)
+>   8. git pull origin backup (enter)
 
 > [!IMPORTANT]
 > setelah itu selesai, developer harus _melakukan peraturan 1_ lagi sebelum memulai perubahan baru.
 > _beri tahu rekan tim yang lain jika ada perubahan di discussion repo ini_
 
 > [!WARNING]
-> Selalu utamakan informasi sesama rekan tim
+> Selalu utamakan informasi sesama rekan tim ✨,
+> Selamat Bekerja 🚀
+> Selamat Bermimpi Indah 💤✨
 
 
