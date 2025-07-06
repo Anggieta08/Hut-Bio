@@ -18,8 +18,8 @@
 > Masuk ke git bash yang tadi dibuka lalu ketikkan perintah:
 >  1. git fetch origin master (enter)
 >  2. git fetch origin backup (enter)
->  3. git pull origin master (enter)
->  4. git pull origin backup (enter)
+>  3. git pull master master (enter)
+>  4. git pull backup master (enter)
 > Setelah itu developer boleh melakukan perubahan pada projek
 
 #### PERATURAN 2
@@ -36,9 +36,9 @@
 >   4. git push origin master (enter)
 >   5. git push origin backup (enter)
 >   6. git fetch origin master (enter)
->   7. git fetch origin backup (enter)
+>   7. git fetch backup master (enter)
 >   8. git pull origin master (enter)
->   9. git pull origin backup (enter)
+>   9. git pull backup master (enter)
 
 > [!IMPORTANT]
 > setelah itu selesai, developer harus _melakukan lagi peraturan ke 1_ sebelum memulai perubahan baru.
