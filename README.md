@@ -6,7 +6,8 @@
 
 ---
 > [!NOTE]
-> - Buka VSCode dan Git Bash di folder project
+> Berikut aturan dan langkah-langkah untuk dorong dan tarik kode sesuai ketentuan
+> - **Buka VSCode dan Git Bash di folder project**
 
 #### PERATURAN 1
 
