@@ -7,64 +7,79 @@
   <style>
     body {
       margin: 0;
+      padding: 40px 20px 40px;
       font-family: 'Segoe UI', sans-serif;
       background-color: #effaaf;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      align-items: flex-start;
+      min-height: 100vh;
+      box-sizing: border-box;
     }
+
     .card {
       width: 95%;
-      max-width: 7200px;
+      max-width: 7200px; 
       background: #96ffe8;
       color: #fff;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      margin: 20px;
+      padding-bottom: 30px;
     }
+
     .card-header {
       padding: 16px;
       position: relative;
     }
+
     .logo {
       position: absolute;
       top: 16px;
       left: 16px;
       width: 80px;
     }
+
     .title {
       text-align: center;
       font-size: 32px;
       font-weight: bold;
       margin-top: 30px;
     }
+
     .title span:nth-child(1) {
       color: #ff00c8;
     }
+
     .title span:nth-child(2) {
       color: #00d26a;
     }
+
     .title span:nth-child(3) {
       color: #ff0062;
       display: block;
       font-size: 14px;
       margin-top: 8px;
     }
+
     .info {
       text-align: center;
       margin-top: 10px;
       font-size: 16px;
     }
+
     .info span {
       display: block;
       margin: 2px 0;
       color: #a5005b;
     }
+
     .countdown {
       text-align: center;
       margin: 20px 0;
     }
+
     .countdown-circle {
       display: inline-block;
       background: #fff;
@@ -76,30 +91,36 @@
       padding: 15px;
       box-sizing: border-box;
     }
+
     .countdown-circle h1 {
       margin: 0;
       font-size: 36px;
-      color: 000;
-    }.register-button {
-  text-align: center;
-  margin: 20px 0;
-}
-.register-button a {
-  background-color: #ff0062;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-.register-button a:hover {
-  background-color: #c7004c;
-}
+      color: #000;
+    }
+
+    .register-button {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .register-button a {
+      background-color: #ff0062;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .register-button a:hover {
+      background-color: #c7004c;
+    }
+
     .rules {
-      background: #f36f;
+      background: #f3f6ff;
       color: #000;
       padding: 16px;
       font-size: 13px;
@@ -107,16 +128,19 @@
       flex-direction: column;
       gap: 10px;
     }
+
     .rules ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
+
     .rules li::before {
       content: "•";
       color: #ff79c3;
       margin-right: 5px;
     }
+
     .footer {
       text-align: center;
       background: #1c98af;
@@ -129,55 +153,72 @@
 </head>
 <body>
   <div class="card">
+    <!-- Header -->
     <div class="card-header">
-      <img class="logo" src="https://www.biofarma.co.id/media/image/originals/post/2023/07/06/bf.png" width="119" alt="Bio Farma Logo">
+      <img class="logo" src="https://www.biofarma.co.id/media/image/originals/post/2023/07/06/bf.png" alt="Bio Farma Logo">
       <div class="title">
-        <span>HUT BIO  135 TAHUN</span><br>
-        <span>Siap-siap untuk perayaan yang paling heboh!  Kami telah menyiapkan banyak kejutan, keseruan, dan momen kebersamaan untuk seluruh tim Bio Farma.  Mari rayakan bersama-sama , Karena #BioFarma: The Only One Forever
-</span>
+        <span>HUT BIO 135 TAHUN</span><br>
+        <span>
+          Siap-siap untuk perayaan yang paling heboh! Kami telah menyiapkan banyak kejutan,
+          keseruan, dan momen kebersamaan untuk seluruh tim Bio Farma.
+          Mari rayakan bersama-sama, karena #BioFarma: The Only One Forever
+        </span>
       </div>
+
+      <!-- Info Waktu -->
       <div class="info">
         <span>Date: 06 August 2025</span>
         <span>Time: 13:00 – 17:00</span>
       </div>
+
+      <!-- Tombol Daftar & Countdown -->
       <div class="countdown">
         <div class="register-button">
-  <a href="https://bit.ly/daftar-biofarma135" target="_blank">Daftar Sekarang</a>
-</div>
+          <a href="https://bit.ly/daftar-biofarma135" target="_blank">Daftar Sekarang</a>
+        </div>
         <div class="countdown-circle">
-          <div>countdown</div>
+          <div>Countdown</div>
           <h1>36</h1>
           <div>Days 20 Hours<br>57:25</div>
         </div>
       </div>
     </div>
+
+    <!-- Aturan dan Info -->
     <div class="rules">
       <ul>
-        <li>1. Pendaftaran 2 langkah aja!
-        ➤ Registrasi: Klik link undangan kamu dari email/WA
-        ➤ Check-in: Di venue saat Hari H (06 Agustus 2024 pukul 12.30 – 14.00)</li><br>
-
-       <li>📌 2. Yang daftar bisa ikutan undian doorprize kece!
-       (Diundi random sama panitia, yang beruntung dapet hadiah menarik 😎)</li><br>
-
-      <li> 📌 3. Yang udah registrasi + check-in bisa ikutan...
-       🎁 GRANDPRIZEEEEEEE!! 🎁
-       (Syarat: harus hadir langsung yaa!)</li><br>
-
-      <li> Kenapa harus dateng karena?
-       1. Acaranya seru banyak hadiah
-       2. Berv ibes positif penuh kejutan 
-       Ayo Rayakan Momen Bersejarah Bareng Tim Bio Frama 
-</li>
+        <li>
+          1. Pendaftaran 2 langkah aja!<br>
+          ➤ Registrasi: Klik link undangan kamu dari email/WA<br>
+          ➤ Check-in: Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)
+        </li>
+        <li>
+          📌 2. Yang daftar bisa ikutan undian doorprize kece!<br>
+          (Diundi random sama panitia, yang beruntung dapet hadiah menarik 😎)
+        </li>
+        <li>
+          📌 3. Yang udah registrasi + check-in bisa ikutan...<br>
+          🎁 GRANDPRIZEEEEEEE!! 🎁<br>
+          (Syarat: harus hadir langsung yaa!)
+        </li>
+        <li>
+          Kenapa harus dateng?<br>
+          1. Acaranya seru banyak hadiah<br>
+          2. Beri vibes positif penuh kejutan<br>
+          Ayo Rayakan Momen Bersejarah Bareng Tim Bio Farma
+        </li>
       </ul>
-      
     </div>
+
+    <!-- Footer -->
     <div class="footer">
       HUT BIO FARMA 135 TAHUN
+    </div>
   </div>
-</body>
-<script>
-const eventDate = new Date("August 6, 2025 13:00:00").getTime();
+
+  <!-- Script Countdown -->
+  <script>
+    const eventDate = new Date("August 6, 2025 13:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -201,7 +242,9 @@ const eventDate = new Date("August 6, 2025 13:00:00").getTime();
         <div>${hours} Hours<br>${minutes}:${seconds.toString().padStart(2, '0')}</div>
       `;
     }
+
     updateCountdown();
     setInterval(updateCountdown, 1000);
-</script>
+  </script>
+</body>
 </html>
