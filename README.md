@@ -18,7 +18,7 @@
 > Masuk ke git bash yang tadi dibuka lalu ketikkan perintah:
 >  1. git fetch origin master (enter)
 >  2. git fetch backup master (enter)
->  3. git pull master master (enter)
+>  3. git pull origin master (enter)
 >  4. git pull backup master (enter)
 > 
 > Setelah itu developer boleh melakukan perubahan pada projek
