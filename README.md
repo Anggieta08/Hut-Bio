@@ -41,7 +41,7 @@
 >   9. git pull origin backup (enter)
 
 > [!IMPORTANT]
-> setelah itu selesai, developer harus _melakukan peraturan 1_ lagi sebelum memulai perubahan baru.
+> setelah itu selesai, developer harus _melakukan lagi peraturan ke 1_ sebelum memulai perubahan baru.
 > 
 > _beri tahu rekan tim yang lain jika ada perubahan di discussion repo ini_
 
