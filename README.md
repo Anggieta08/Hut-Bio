@@ -17,7 +17,7 @@
 > [!TIP]
 > Masuk ke git bash yang tadi dibuka lalu ketikkan perintah:
 >  1. git fetch origin master (enter)
->  2. git fetch origin backup (enter)
+>  2. git fetch backup master (enter)
 >  3. git pull master master (enter)
 >  4. git pull backup master (enter)
 > 
@@ -35,7 +35,7 @@
 >   2. git add . (enter)
 >   3. git commit -m "_pesan commit **SESUAI PERUBAHAN**_" (enter)
 >   4. git push origin master (enter)
->   5. git push origin backup (enter)
+>   5. git push backup master (enter)
 >   6. git fetch origin master (enter)
 >   7. git fetch backup master (enter)
 >   8. git pull origin master (enter)
