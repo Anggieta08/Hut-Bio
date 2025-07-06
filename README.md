@@ -30,14 +30,15 @@
 
 > [!TIP]
 > Masuk ke git bash lalu ketikkan perintah:
->   1. git add . (enter)
->   2. git commit -m "_pesan commit **SESUAI PERUBAHAN**_" (enter)
->   3. git push origin master (enter)
->   4. git push origin backup (enter)
->   5. git fetch origin master (enter)
->   6. git fetch origin backup (enter)
->   7. git pull origin master (enter)
->   8. git pull origin backup (enter)
+>   1. git status (enter)
+>   2. git add . (enter)
+>   3. git commit -m "_pesan commit **SESUAI PERUBAHAN**_" (enter)
+>   4. git push origin master (enter)
+>   5. git push origin backup (enter)
+>   6. git fetch origin master (enter)
+>   7. git fetch origin backup (enter)
+>   8. git pull origin master (enter)
+>   9. git pull origin backup (enter)
 
 > [!IMPORTANT]
 > setelah itu selesai, developer harus _melakukan peraturan 1_ lagi sebelum memulai perubahan baru.
