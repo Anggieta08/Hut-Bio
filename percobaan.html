@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      padding: 40px 20px 40px;
+      padding: 40px 20px;
       font-family: 'Segoe UI', sans-serif;
       background-color: #effaaf;
       display: flex;
@@ -19,9 +19,9 @@
 
     .card {
       width: 95%;
-      max-width: 7200px; 
+      max-width: 1200px; 
       background: #96ffe8;
-      color: #fff;
+      color: #000;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 16px rgba(0,0,0,0.3);
@@ -38,7 +38,7 @@
       position: absolute;
       top: 16px;
       left: 16px;
-      width: 80px;
+      width: 100px;
     }
 
     .title {
@@ -48,36 +48,40 @@
       margin-top: 30px;
     }
 
-    .title span:nth-child(1) {
+    .main-title {
+      font-size: 32px;
+      font-weight: bold;
       color: #ff00c8;
     }
 
-    .title span:nth-child(2) {
-      color: #00d26a;
-    }
-
-    .title span:nth-child(3) {
-      color: #ff0062;
+    .subtitle {
+      font-size: 15px;
       display: block;
-      font-size: 14px;
-      margin-top: 8px;
+      margin-top: 10px;
+      color: #000000;
+      line-height: 1.6;
     }
 
     .info {
       text-align: center;
-      margin-top: 10px;
+      margin-bottom: 20px;
       font-size: 16px;
+      color: #a5005b; 
+      font-weight: bold;
     }
 
     .info span {
       display: block;
       margin: 2px 0;
-      color: #a5005b;
     }
 
     .countdown {
       text-align: center;
-      margin: 20px 0;
+      margin: 30px 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
 
     .countdown-circle {
@@ -99,8 +103,7 @@
     }
 
     .register-button {
-      text-align: center;
-      margin: 20px 0;
+     margin-bottom: 10px;
     }
 
     .register-button a {
@@ -113,6 +116,7 @@
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease;
+      display: inline-block;
     }
 
     .register-button a:hover {
@@ -153,44 +157,54 @@
 </head>
 <body>
   <div class="card">
-    <!-- Header -->
     <div class="card-header">
       <img class="logo" src="https://www.biofarma.co.id/media/image/originals/post/2023/07/06/bf.png" alt="Bio Farma Logo">
       <div class="title">
         <span>HUT BIO 135 TAHUN</span><br>
-        <span>
+        <span class="subtitle">
           Siap-siap untuk perayaan yang paling heboh! Kami telah menyiapkan banyak kejutan,
-          keseruan, dan momen kebersamaan untuk seluruh tim Bio Farma.
+          keseruan, dan momen kebersamaan untuk seluruh tim Bio Farma.<br>
           Mari rayakan bersama-sama, karena #BioFarma: The Only One Forever
         </span>
-      </div>
+      </div><br>
 
-      <!-- Info Waktu -->
+      
       <div class="info">
         <span>Date: 06 August 2025</span>
         <span>Time: 13:00 – 17:00</span>
       </div>
 
-      <!-- Tombol Daftar & Countdown -->
+      
       <div class="countdown">
-        <div class="register-button">
-          <a href="https://bit.ly/daftar-biofarma135" target="_blank">Daftar Sekarang</a>
-        </div>
         <div class="countdown-circle">
           <div>Countdown</div>
           <h1>36</h1>
           <div>Days 20 Hours<br>57:25</div>
         </div>
+        <div class="register-button"><br>
+        <button onclick="handleRegisterClick()">Daftar Sekarang</button>
+
+        </div>
       </div>
     </div>
 
-    <!-- Aturan dan Info -->
     <div class="rules">
       <ul>
         <li>
-          1. Pendaftaran 2 langkah aja!<br>
-          ➤ Registrasi: Klik link undangan kamu dari email/WA<br>
-          ➤ Check-in: Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)
+              <h1>Rules P</h1>
+    <div class="container">
+        <div class="box">
+            <img src="Gambar/resepsionis_hotel.jpg" alt="Resepsionis">
+            <div>
+                <h2>Resepsionis 24 jam</h2>
+                <p>
+                    Menyediakan layanan 24 jam untuk memastikan kebutuhan tamu selalu terpenuhi.
+                </p>
+            </div>
+        </div>
+              Pendaftaran 2 langkah aja!<br>
+          1. Registrasi: Klik link undangan kamu dari email/WA<br>
+          2. Check-in: Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)
         </li>
         <li>
           📌 2. Yang daftar bisa ikutan undian doorprize kece!<br>
@@ -205,18 +219,17 @@
           Kenapa harus dateng?<br>
           1. Acaranya seru banyak hadiah<br>
           2. Beri vibes positif penuh kejutan<br>
-          Ayo Rayakan Momen Bersejarah Bareng Tim Bio Farma
+          Ayo Rayakan Momen Bersejarah Bareng Tim Bio Farma<br>
+          💬 "Yuk rayakan bareng! Karena Bio Farma tuh... GAK ADA 2NYA!"
         </li>
       </ul>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
       HUT BIO FARMA 135 TAHUN
     </div>
   </div>
 
-  <!-- Script Countdown -->
   <script>
     const eventDate = new Date("August 6, 2025 13:00:00").getTime();
 
