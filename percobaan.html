@@ -103,23 +103,23 @@
     }
 
     .register-button {
-     margin-bottom: 10px;
+      margin-bottom: 10px;
     }
 
-    .register-button a {
+    .register-button button {
       background-color: #ff0062;
       color: white;
       padding: 12px 24px;
       border-radius: 30px;
-      text-decoration: none;
+      border: none;
       font-size: 16px;
       font-weight: bold;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease;
-      display: inline-block;
+      cursor: pointer;
     }
 
-    .register-button a:hover {
+    .register-button button:hover {
       background-color: #c7004c;
     }
 
@@ -128,21 +128,87 @@
       color: #000;
       padding: 16px;
       font-size: 13px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 30px 0;
+    }
+
+    .timeline {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      margin: 20px auto;
+      position: relative;
     }
 
-    .rules ul {
-      list-style: none;
-      padding: 0;
+    .timeline__event {
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      border-radius: 6px;
+      align-self: center;
+      width: 90%;
+    }
+
+    .timeline__event:nth-child(2n+1) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline__event__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9251ac;
+      background: #f6a4ec;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin: 0 20px;
+      font-size: 60px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .timeline__event__date {
+      background: #9251ac;
+      color: #f6a4ec;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 20px;
+      white-space: nowrap;
+      border-radius: 6px 0 0 6px;
+      display: flex;
+      align-items: center;
+    }
+
+    .timeline__event:nth-child(2n+1) .timeline__event__date {
+      border-radius: 0 6px 6px 0;
+    }
+
+    .timeline__event__content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 0 6px 6px 0;
+      flex: 1;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .timeline__event:nth-child(2n+1) .timeline__event__content {
+      border-radius: 6px 0 0 6px;
+    }
+
+    .timeline__event__title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #9251ac;
+    }
+
+    .timeline__event__description p {
       margin: 0;
-    }
-
-    .rules li::before {
-      content: "•";
-      color: #ff79c3;
-      margin-right: 5px;
+      font-size: 14px;
     }
 
     .footer {
@@ -152,6 +218,7 @@
       padding: 10px;
       font-weight: bold;
       font-size: 14px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -168,13 +235,11 @@
         </span>
       </div><br>
 
-      
       <div class="info">
         <span>Date: 06 August 2025</span>
         <span>Time: 13:00 – 17:00</span>
       </div>
 
-      
       <div class="countdown">
         <div class="countdown-circle">
           <div>Countdown</div>
@@ -182,47 +247,51 @@
           <div>Days 20 Hours<br>57:25</div>
         </div>
         <div class="register-button"><br>
-        <button onclick="handleRegisterClick()">Daftar Sekarang</button>
-
+          <button onclick="handleRegisterClick()">Daftar Sekarang</button>
         </div>
       </div>
     </div>
 
     <div class="rules">
-      <ul>
-        <li>
-              <h1>Rules P</h1>
-    <div class="container">
-        <div class="box">
-            <img src="Gambar/resepsionis_hotel.jpg" alt="Resepsionis">
-            <div>
-                <h2>Resepsionis 24 jam</h2>
-                <p>
-                    Menyediakan layanan 24 jam untuk memastikan kebutuhan tamu selalu terpenuhi.
-                </p>
+      <h2>‼🏁 YUK, SIMAK ATURAN MAINNYA 🏁‼</h2>
+      <div class="timeline"> 
+        <div class="timeline__event">
+          <div class="timeline__event__icon">📝</div>
+          <div class="timeline__event__date">1</div>
+          <div class="timeline__event__content">
+            <div class="timeline__event__title">📌📩 Pendaftarannya gampang banget cuma 2 langkah aja nihh, yuk simak</div>
+            <div class="timeline__event__description">
+              <p>1. Registrasi : Klik link undangan kamu dari Email atau WhatsApp</p>
+              <p>2. Check-in : Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)</p>
             </div>
+          </div>
         </div>
-              Pendaftaran 2 langkah aja!<br>
-          1. Registrasi: Klik link undangan kamu dari email/WA<br>
-          2. Check-in: Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)
-        </li>
-        <li>
-          📌 2. Yang daftar bisa ikutan undian doorprize kece!<br>
-          (Diundi random sama panitia, yang beruntung dapet hadiah menarik 😎)
-        </li>
-        <li>
-          📌 3. Yang udah registrasi + check-in bisa ikutan...<br>
-          🎁 GRANDPRIZEEEEEEE!! 🎁<br>
-          (Syarat: harus hadir langsung yaa!)
-        </li>
-        <li>
-          Kenapa harus dateng?<br>
-          1. Acaranya seru banyak hadiah<br>
-          2. Beri vibes positif penuh kejutan<br>
-          Ayo Rayakan Momen Bersejarah Bareng Tim Bio Farma<br>
-          💬 "Yuk rayakan bareng! Karena Bio Farma tuh... GAK ADA 2NYA!"
-        </li>
-      </ul>
+
+        <div class="timeline__event">
+          <div class="timeline__event__icon">🎉</div>
+          <div class="timeline__event__date">2</div>
+          <div class="timeline__event__content">
+            <div class="timeline__event__title">📌🎉 Sudah registrasi ? siap-siap dapat doorprize menarik</div>
+            <div class="timeline__event__description">
+              <p>Nah, setiap peserta yang sudah daftar akan otomatis masuk ke dalam undian doorprize ini loh dengan berbagai hadiah menarik tentunya. </p>
+              <p>( Undian ini diundi random sama panitia yaa, dan yang beruntung bisa dapet hadiah yang super kece dan menarik juga ) 🎁🪄</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__event">
+          <div class="timeline__event__icon">😎</div>
+          <div class="timeline__event__date">3</div>
+          <div class="timeline__event__content">
+            <div class="timeline__event__title"> ⁉️🌟Mau hadiah lebih besar ? ini kesempatanmu !</div>
+            <div class="timeline__event__description">
+              <p> kalo kalian sudah mengikuti Registrasi + Check in di awal, kalian ini bisa ikutan sesuatu yang bombastis dan luar biasa 🌟💌 yaituuu jeng jeng jeng......</p>
+               <p>🎁✨ GRANDPRIZEEEEEEE  🎁✨</p> 
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="footer">
@@ -254,6 +323,10 @@
         <h1>${days}</h1>
         <div>${hours} Hours<br>${minutes}:${seconds.toString().padStart(2, '0')}</div>
       `;
+    }
+
+    function handleRegisterClick() {
+      alert("Fitur pendaftaran belum aktif.");
     }
 
     updateCountdown();
