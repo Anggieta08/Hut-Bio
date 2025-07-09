@@ -76,13 +76,38 @@
     }
 
     .countdown {
-      text-align: center;
-      margin: 30px 0 40px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0 40px;
+
     }
+
+  .countdown-item {
+    background: #fff;
+    border-radius: 12px;
+    width: 100px;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: #000;
+    }
+
+    .countdown-item h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff0062;
+  }
+
+  .countdown-item span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  }
 
     .countdown-circle {
       display: inline-block;
@@ -236,22 +261,35 @@
       </div><br>
 
       <div class="info">
-        <span>Date: 06 August 2025</span>
-        <span>Time: 13:00 – 17:00</span>
-      </div>
+    <div><strong>🗓️ Tanggal Acara:</strong> Rabu, 6 Agustus 2025</div>
+    <div><strong>🕐 Waktu Acara:</strong> Pukul 13.00 – 17.00 WIB</div>
+    <div style="margin-top: 10px; font-size: 14px; font-weight: normal; color: #444;">
+  </div>
+</div>
 
-      <div class="countdown">
-        <div class="countdown-circle">
-          <div>Countdown</div>
-          <h1>36</h1>
-          <div>Days 20 Hours<br>57:25</div>
-        </div>
-        <div class="register-button"><br>
-          <button onclick="handleRegisterClick()">Daftar Sekarang</button>
-        </div>
-      </div>
-    </div>
+    <div class="countdown">
+  <div class="countdown-item">
+    <h1 id="days">14</h1>
+    <span>Days</span>
+  </div>
+  <div class="countdown-item">
+    <h1 id="hours">29</h1>
+    <span>Hours</span>
+  </div>
+  <div class="countdown-item">
+    <h1 id="minutes">17.45</h1>
+    <span>Minutes</span>
+  </div>
+  <div class="countdown-item">
+    <h1 id="seconds">--</h1>
+    <span>Seconds</span>
+  </div>
 
+   <div class="register-button"><br>
+      <button onclick="handleRegisterClick()">Daftar Sekarang</button>
+   </div>
+
+</div>
     <div class="rules">
       <h2>‼🏁 YUK, SIMAK ATURAN MAINNYA 🏁‼</h2>
       <div class="timeline"> 
@@ -294,6 +332,8 @@
       </div>
     </div>
 
+
+
     <div class="footer">
       HUT BIO FARMA 135 TAHUN
     </div>
@@ -306,24 +346,25 @@
       const now = new Date().getTime();
       const distance = eventDate - now;
 
-      if (distance < 0) {
-        document.querySelector(".countdown-circle").innerHTML = `
-          <h1>0</h1><div>Acara Dimulai!</div>
-        `;
-        return;
-      }
+if (distance < 0) {
+      document.getElementById("days").innerText = "0";
+      document.getElementById("hours").innerText = "0";
+      document.getElementById("minutes").innerText = "0";
+      document.getElementById("seconds").innerText = "0";
+      return;
+    }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.querySelector(".countdown-circle").innerHTML = `
-        <div>Countdown</div>
-        <h1>${days}</h1>
-        <div>${hours} Hours<br>${minutes}:${seconds.toString().padStart(2, '0')}</div>
-      `;
-    }
+      
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+  }
 
     function handleRegisterClick() {
       alert("Fitur pendaftaran belum aktif.");
