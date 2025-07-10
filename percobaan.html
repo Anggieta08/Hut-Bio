@@ -307,6 +307,12 @@
   font-weight: bold;
   font-size: 16px;
 }
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
     
   </style>
 </head>
@@ -329,6 +335,7 @@
     <div style="margin-top: 10px; font-size: 14px; font-weight: normal; color: #444;">
   </div>
 </div>
+<div class="box">
 
     <div class="countdown">
   <div class="countdown-item">
@@ -347,10 +354,10 @@
     <h1 id="seconds">--</h1>
     <span>Seconds</span>
   </div>
-
-   <div class="register-button"><br>
+    
+    <div class="register-button"><br>
       <button onclick="handleRegisterClick()">Daftar Sekarang</button>
-   </div>
+    </div>
 
 </div>
     <div class="rules">
