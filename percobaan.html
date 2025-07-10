@@ -1,467 +1,511 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HUT Bio Farma 135 Tahun</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #a436ff;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUT Bio Farma 135 Tahun</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #a436ff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
 
-    .box {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 16px; /* ujung melengkung */
-}
+      .box {
+        padding-inline: 20px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .card {
-      width: 95%;
-      max-width: 1200px; 
-      background: rgb(238, 255, 56);
-      color: #a11573;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-      margin: 20px;
-      padding-bottom: 30px;
-    }
+      .card {
+        width: 95%;
+        max-width: 1200px;
+        background: rgb(238, 255, 56);
+        color: #a11573;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        margin: 20px;
+        padding-bottom: 30px;
+        padding-inline: 5%;
+      }
 
-    .card-header {
-      padding: 16px;
-      position: relative;
-    }
+      .card-header {
+        padding: 16px;
+        position: relative;
+      }
 
-    .logo {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      width: 150px;
-    }
+      .logo {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        width: 150px;
+      }
 
-    .title {
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      margin-top: 30px;
-    }
+      .title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 30px;
+      }
 
-    .main-title {
-      font-size: 32px;
-      font-weight: bold;
-      color: #ff00c8;
-    }
+      .main-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #ff00c8;
+      }
 
-    .subtitle {
-      font-size: 15px;
-      display: block;
-      margin-top: 10px;
-      color: #a5005b;
-      line-height: 1.6;
-    }
+      .subtitle {
+        font-size: 15px;
+        display: block;
+        margin-top: 10px;
+        color: #a5005b;
+        line-height: 1.6;
+      }
 
-    .info {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 16px;
-      color: #a5005b; 
-      font-weight: bold;
-    }
+      .info {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #a5005b;
+        font-weight: bold;
+      }
 
-    .info span {
-      display: block;
-      margin: 2px 0;
-    }
+      .info span {
+        display: block;
+        margin: 2px 0;
+      }
 
-    .countdown {
-      display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 30px 0 40px;
+      .countdown {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 30px 0 40px;
+      }
 
-    }
+      .countdown-item {
+        background: #fff;
+        border-radius: 30px;
+        width: 100px;
+        padding: 15px 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        color: #000;
+      }
 
-  .countdown-item {
-    background: #fff;
-    border-radius: 30px;
-    width: 100px;
-    padding: 15px 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    color: #000;
-    }
+      .countdown-item h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+        color: #ff0062;
+      }
 
-    .countdown-item h1 {
-  margin: 0;
-  font-size: 36px;
-  font-weight: bold;
-  color: #ff0062;
-  }
+      .countdown-item span {
+        display: block;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #444;
+      }
 
-  .countdown-item span {
-  display: block;
-  margin-top: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #444;
-  }
+      .countdown-circle {
+        display: inline-block;
+        background: #fff;
+        border-radius: 30%;
+        width: 130px;
+        height: 130px;
+        color: #000;
+        font-weight: bold;
+        padding: 15px;
+        box-sizing: border-box;
+      }
 
-    .countdown-circle {
-      display: inline-block;
-      background: #fff;
-      border-radius: 30%;
-      width: 130px;
-      height: 130px;
-      color: #000;
-      font-weight: bold;
-      padding: 15px;
-      box-sizing: border-box;
-    }
+      .countdown-circle h1 {
+        margin: 0;
+        font-size: 36px;
+        color: #000;
+      }
 
-    .countdown-circle h1 {
-      margin: 0;
-      font-size: 36px;
-      color: #000;
-    }
+      .register-button {
+        margin-bottom: 10px;
+        
+      }
 
-    .register-button {
-      margin-bottom: 10px;
-    }
+      .register-button button {
+        background-color: #ff0062;
+        color: white;
+        padding: 15px 50px;
+        border-radius: 30px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
 
-    .register-button button {
-      background-color: #ff0062;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 30px;
-      border: none;
-      font-size: 16px;
-      font-weight: bold;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
+      .register-button button:hover {
+        background-color: #c7004c;
+      }
 
-    .register-button button:hover {
-      background-color: #c7004c;
-    }
+      .rules {
+        background: #fff5fb;
+        color: #000;
+        padding: 40px 20px;
+        font-size: 13px;
+        border-radius: 16px;
+        margin: 40px 20px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+      }
 
-    .rules {
-      background: #fff5fb;
-      color: #000;
-      padding: 40px 20px; 
-      font-size: 13px;
-      border-radius: 16px;
-      margin: 40px 20px; 
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
-      text-align: center;
-}
+      h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 30px 0;
+      }
 
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        position: relative;
+      }
 
-    h2 {
-      text-align: center;
-      font-size: 24px;
-      font-weight: 600;
-      margin: 30px 0;
-    }
+      .timeline__event {
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        border-radius: 6px;
+        align-self: center;
+        width: 90%;
+      }
 
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      margin: 20px auto;
-      position: relative;
-    }
+      .timeline__event:nth-child(2n + 1) {
+        flex-direction: row-reverse;
+      }
 
-    .timeline__event {
-      margin-bottom: 20px;
-      position: relative;
-      display: flex;
-      border-radius: 6px;
-      align-self: center;
-      width: 90%;
-    }
+      .timeline__event__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9251ac;
+        background: #f6a4ec;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 0 20px;
+        font-size: 60px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
 
-    .timeline__event:nth-child(2n+1) {
-      flex-direction: row-reverse;
-    }
+      .timeline__event__date {
+        background: #fa81a9;
+        color: #000;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 20px;
+        white-space: nowrap;
+        border-radius: 6px 0 0 6px;
+        display: flex;
+        align-items: center;
+      }
 
-    .timeline__event__icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #9251ac;
-      background: #f6a4ec;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      margin: 0 20px;
-      font-size: 60px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+      .timeline__event:nth-child(2n + 1) .timeline__event__date {
+        border-radius: 0 6px 6px 0;
+      }
 
-    .timeline__event__date {
-      background: #fa81a9;
-      color: #000;
-      padding: 10px 20px;
-      font-weight: bold;
-      font-size: 20px;
-      white-space: nowrap;
-      border-radius: 6px 0 0 6px;
-      display: flex;
-      align-items: center;
-    }
+      .timeline__event__content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 0 6px 6px 0;
+        flex: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-    .timeline__event:nth-child(2n+1) .timeline__event__date {
-      border-radius: 0 6px 6px 0;
-    }
+      .timeline__event:nth-child(2n + 1) .timeline__event__content {
+        border-radius: 6px 0 0 6px;
+      }
 
-    .timeline__event__content {
-      background: #fff;
-      padding: 20px;
-      border-radius: 0 6px 6px 0;
-      flex: 1;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+      .timeline__event__title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #000;
+      }
 
-    .timeline__event:nth-child(2n+1) .timeline__event__content {
-      border-radius: 6px 0 0 6px;
-    }
+      .timeline__event__description p {
+        margin: 0;
+        font-size: 14px;
+      }
 
-    .timeline__event__title {
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: #000;
-    }
+      .footer {
+        text-align: center;
+        background: #ef4c39;
+        color: #fff;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 0px;
+        border-radius: 10px;
+      }
 
-    .timeline__event__description p {
-      margin: 0;
-      font-size: 14px;
-    }
+      .reasons-section {
+        width: 100%;
+        padding: 40px 20px;
+        background: #fff5fb;
+        border-radius: 16px;
+        margin: 40px 20px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
 
-    .footer {
-      text-align: center;
-      background: #EF4C39;
-      color: #fff;
-      padding: 10px;
-      font-weight: bold;
-      font-size: 14px;
-      margin-top: 40px;
-    }
+      .reasons-section h2 {
+        font-size: 28px;
+        color: #e91e63;
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
 
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 10px;
+      }
 
+      .reason-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
-    .reasons-section {
-  padding: 40px 20px;
-  background: #fff5fb;
-  border-radius: 16px;
-  margin: 40px 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+      .reasons-closing {
+        font-size: 18px;
+        font-weight: bold;
+        color: #c2185b;
+        margin-top: 40px;
+      }
 
-.reasons-section h2 {
-  font-size: 28px;
-  color: #e91e63;
-  margin-bottom: 30px;
-  font-weight: 700;
-}
+      .reasons-quote {
+        margin-top: 20px;
+        font-style: italic;
+        color: #880e4f;
+        font-weight: bold;
+        font-size: 16px;
+      }
 
-.reasons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 0 10px;
-}
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <img
+          class="logo"
+          src="https://www.biofarma.co.id/media/image/originals/post/2023/07/06/bf.png"
+          alt="Bio Farma Logo"
+        />
+        <div class="title">
+          <h2>HUT BIO 135 TAHUN</h2>
+          <p class="subtitle">
+            Siap-siap untuk perayaan yang paling heboh! Kami telah menyiapkan
+            banyak kejutan, keseruan, dan momen kebersamaan untuk seluruh tim
+            Bio Farma.<br />
+            Mari rayakan bersama-sama, karena
+            <strong>#BioFarma: The Only One Forever</strong>
+          </p>
+        </div>
+        <div class="info">
+          <p><strong>🗓️ Tanggal Acara:</strong> Rabu, 6 Agustus 2025</p>
+          <p><strong>🕐 Waktu Acara:</strong> Pukul 13.00 – 17.00 WIB</p>
+        </div>
+      </div>
 
-.reason-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+      <div class="container">
+        <div class="countdown">
+          <div class="countdown-item">
+            <h1 id="days">--</h1>
+            <span>Days</span>
+          </div>
+          <div class="countdown-item">
+            <h1 id="hours">--</h1>
+            <span>Hours</span>
+          </div>
+          <div class="countdown-item">
+            <h1 id="minutes">--</h1>
+            <span>Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <h1 id="seconds">--</h1>
+            <span>Seconds</span>
+          </div>
+        </div>
 
-.reasons-closing {
-  font-size: 18px;
-  font-weight: bold;
-  color: #c2185b;
-  margin-top: 40px;
-}
+        <div class="register-button">
+          <button onclick="handleRegisterClick()">Daftar Sekarang</button>
+        </div>
+      </div>
 
-.reasons-quote {
-  margin-top: 20px;
-  font-style: italic;
-  color: #880e4f;
-  font-weight: bold;
-  font-size: 16px;
-}
+      <div class="box">
+        <div class="rules">
+          <h2>‼🏁 YUK, SIMAK ATURAN MAINNYA 🏁‼</h2>
+          <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline__event">
+              <div class="timeline__event__icon">📝</div>
+              <div class="timeline__event__date">1</div>
+              <div class="timeline__event__content">
+                <h3 class="timeline__event__title">
+                  📌📩 Pendaftarannya gampang banget cuma 2 langkah aja nihh
+                </h3>
+                <div class="timeline__event__description">
+                  <p>
+                    1. Registrasi: Klik link undangan dari Email atau WhatsApp
+                  </p>
+                  <p>
+                    2. Check-in: Di venue saat Hari H (06 Agustus 2025 pukul
+                    12.30 – 14.00)
+                  </p>
+                </div>
+              </div>
+            </div>
 
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-    
-  </style>
-</head>
-<body>
-  <div class="card">
-    <div class="card-header">
-      <img class="logo" src="https://www.biofarma.co.id/media/image/originals/post/2023/07/06/bf.png" alt="Bio Farma Logo">
-      <div class="title"><br>
-        <span>HUT BIO 135 TAHUN</span>
-        <span class="subtitle">
-          Siap-siap untuk perayaan yang paling heboh! Kami telah menyiapkan banyak kejutan,
-          keseruan, dan momen kebersamaan untuk seluruh tim Bio Farma.<br>
-          Mari rayakan bersama-sama, karena #BioFarma: The Only One Forever
-        </span>
-      </div><br>
+            <!-- Step 2 -->
+            <div class="timeline__event">
+              <div class="timeline__event__icon">🎉</div>
+              <div class="timeline__event__date">2</div>
+              <div class="timeline__event__content">
+                <h3 class="timeline__event__title">
+                  📌🎉 Siap-siap dapat doorprize menarik
+                </h3>
+                <div class="timeline__event__description">
+                  <p>
+                    Setiap peserta yang sudah daftar otomatis masuk undian
+                    doorprize loh 🎁🪄
+                  </p>
+                  <p>
+                    Panitia undi secara random, dan yang beruntung bisa dapet
+                    hadiah kece!
+                  </p>
+                </div>
+              </div>
+            </div>
 
-      <div class="info">
-    <div><strong>🗓️ Tanggal Acara:</strong> Rabu, 6 Agustus 2025</div>
-    <div><strong>🕐 Waktu Acara:</strong> Pukul 13.00 – 17.00 WIB</div>
-    <div style="margin-top: 10px; font-size: 14px; font-weight: normal; color: #444;">
-  </div>
-</div>
-<div class="box">
-
-    <div class="countdown">
-  <div class="countdown-item">
-    <h1 id="days">--</h1>
-    <span>Days</span>
-  </div>
-  <div class="countdown-item">
-    <h1 id="hours">=--</h1>
-    <span>Hours</span>
-  </div>
-  <div class="countdown-item">
-    <h1 id="minutes">--</h1>
-    <span>Minutes</span>
-  </div>
-  <div class="countdown-item">
-    <h1 id="seconds">--</h1>
-    <span>Seconds</span>
-  </div>
-    
-    <div class="register-button"><br>
-      <button onclick="handleRegisterClick()">Daftar Sekarang</button>
-    </div>
-
-</div>
-    <div class="rules">
-      <h2>‼🏁 YUK, SIMAK ATURAN MAINNYA 🏁‼</h2>
-      <div class="timeline"> 
-        <div class="timeline__event">
-          <div class="timeline__event__icon">📝</div>
-          <div class="timeline__event__date">1</div>
-          <div class="timeline__event__content">
-            <div class="timeline__event__title">📌📩 Pendaftarannya gampang banget cuma 2 langkah aja nihh, yuk simak</div>
-            <div class="timeline__event__description">
-              <p>1. Registrasi : Klik link undangan kamu dari Email atau WhatsApp</p>
-              <p>2. Check-in : Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)</p>
+            <!-- Step 3 -->
+            <div class="timeline__event">
+              <div class="timeline__event__icon">😎</div>
+              <div class="timeline__event__date">3</div>
+              <div class="timeline__event__content">
+                <h3 class="timeline__event__title">
+                  ⁉️🌟 Mau hadiah lebih besar?
+                </h3>
+                <div class="timeline__event__description">
+                  <p>
+                    Jika kamu sudah registrasi + check-in, kamu bisa ikutan
+                    GRANDPRIZE 🎁✨
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline__event">
-          <div class="timeline__event__icon">🎉</div>
-          <div class="timeline__event__date">2</div>
-          <div class="timeline__event__content">
-            <div class="timeline__event__title">📌🎉 Sudah registrasi ? siap-siap dapat doorprize menarik</div>
-            <div class="timeline__event__description">
-              <p>Nah, setiap peserta yang sudah daftar akan otomatis masuk ke dalam undian doorprize ini loh dengan berbagai hadiah menarik tentunya. </p>
-              <p>( Undian ini diundi random sama panitia yaa, dan yang beruntung bisa dapet hadiah yang super kece dan menarik juga ) 🎁🪄</p>
+        <div class="reasons-section">
+          <h2>Kenapa Harus Datang🤔...?</h2>
+          <div class="reasons-grid">
+            <div class="reason-card">🎊🎁 Acaranya seru banyak hadiah</div>
+            <div class="reason-card">😻🤗 Bervibes positif penuh kejutan</div>
+            <div class="reason-card">
+              🥳🎮 Banyak games seru yang bikin happy bareng
+            </div>
+            <div class="reason-card">
+              ✌🏻💕 Moment kebersamaan yang sangat terasa
+            </div>
+            <div class="reason-card">
+              📈😆 Bangun solidaritas dan kekompakan tinggi
+            </div>
+            <div class="reason-card">
+              🎙🤩 Penampilan spesial & hiburan memorable
+            </div>
+            <div class="reason-card">
+              😍📯 Seru-seruan bareng teman dari berbagai divisi
+            </div>
+            <div class="reason-card">
+              🎁🌟 Kenang-kenangan eksklusif dari HUT BIO FARMA ke-135
             </div>
           </div>
-        </div>
 
-        <div class="timeline__event">
-          <div class="timeline__event__icon">😎</div>
-          <div class="timeline__event__date">3</div>
-          <div class="timeline__event__content">
-            <div class="timeline__event__title"> ⁉️🌟Mau hadiah lebih besar ? ini kesempatanmu !</div>
-            <div class="timeline__event__description">
-              <p> kalo kalian sudah mengikuti Registrasi + Check in di awal, kalian ini bisa ikutan sesuatu yang bombastis dan luar biasa 🌟💌 yaituuu jeng jeng jeng......</p>
-               <p>🎁✨ GRANDPRIZEEEEEEE  🎁✨</p> 
+          <div class="reasons-closing">
+            Ayo Rayakan Momen Indah Bersejarah Bareng Tim Bio Farma
+          </div>
 
-            </div>
+          <div class="reasons-quote">
+            💬🔊 Karena Bio Farma tuh... <strong>GAK ADA 2NYA!</strong>
           </div>
         </div>
       </div>
+
+      <div class="footer">HUT BIO FARMA 135 TAHUN</div>
     </div>
 
-    <div class="reasons-section">
-  <h2>Kenapa Harus Datang🤔...?</h2>
-  <div class="reasons-grid">
-    <div class="reason-card">🎊🎁 Acaranya seru banyak hadiah</div>
-    <div class="reason-card">😻🤗 Bervibes positif penuh kejutan</div>
-     <div class="reason-card">🥳🎮 Banyak games seru yang bikin happy bareng </div>
-    <div class="reason-card">✌🏻💕 Moment kebersamaan yang sangat terasa</div>
-    <div class="reason-card">📈😆 Bangun Rasa Kebersamaan & Solidaritas yang tinggi </div>
-    <div class="reason-card">🎙🤩 Ada penampilan spesial & hiburan yang bikin terngiang-ngiang</div>
-    <div class="reason-card">😍📯 Bisa ketemu dan seru-seruan bareng teman-teman dari berbagai divisi</div>
-    <div class="reason-card">🎁🌟 Dapat kenang-kenangan eksklusif dari perayaan HUT BIO FARMA ke-135 tahun</div>
-  </div>
+    <script>
+      const eventDate = new Date("August 6, 2025 13:00:00").getTime();
 
-  <div class="reasons-closing">
-    Ayo Rayakan Bersama Momen Indah Bersejarah Bareng Tim Bio Farma
-  </div>
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
 
-  <div class="reasons-quote">
-    💬🔊 Yuk rayakan bareng-bareng, Karena Bio Farma tuh .... <strong>GAK ADA 2NYA!</strong><br>
-  </div>
-</div>
+        if (distance < 0) {
+          document.getElementById("days").innerText = "0";
+          document.getElementById("hours").innerText = "0";
+          document.getElementById("minutes").innerText = "0";
+          document.getElementById("seconds").innerText = "0";
+          return;
+        }
 
-    <div class="footer">
-      HUT BIO FARMA 135 TAHUN
-    </div>
-  </div>
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  <script>
-    const eventDate = new Date("August 6, 2025 13:00:00").getTime();
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds
+          .toString()
+          .padStart(2, "0");
+      }
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
+      function handleRegisterClick() {
+        alert("Fitur pendaftaran belum aktif.");
+      }
 
-if (distance < 0) {
-      document.getElementById("days").innerText = "0";
-      document.getElementById("hours").innerText = "0";
-      document.getElementById("minutes").innerText = "0";
-      document.getElementById("seconds").innerText = "0";
-      return;
-    }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-  }
-
-    function handleRegisterClick() {
-      alert("Fitur pendaftaran belum aktif.");
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
-</body>
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
 </html>
