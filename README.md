@@ -53,3 +53,4 @@
 
 > [!INFO]
 > Jika ada pertanyaan atau kebingungan, silakan bertanya kepada rekan tim
+> ### SEMANGAT! 🚀
