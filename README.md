@@ -50,3 +50,6 @@
 > Selalu utamakan informasi sesama rekan tim ✨,
 > Selamat Bekerja 🚀
 > Selamat Bermimpi Indah 💤✨
+
+> [!INFO]
+> Jika ada pertanyaan atau kebingungan, silakan bertanya kepada rekan tim
