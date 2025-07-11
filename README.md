@@ -1,7 +1,7 @@
 <div align="center">
 <h1> Welcome To Project Bio Farma </h1>
 
-##### Repository ini untuk tim maintenance *bersifat rahasia*, jangan menyebarkan kepada siapapun👍
+##### Repository ini untuk pengembangan website Hut Bio Farma👍
 </div>
 
 ---
