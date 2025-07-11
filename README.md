@@ -50,7 +50,3 @@
 > Selalu utamakan informasi sesama rekan tim ✨,
 > Selamat Bekerja 🚀
 > Selamat Bermimpi Indah 💤✨
-
-test update
-
-
