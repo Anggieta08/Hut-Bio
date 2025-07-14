@@ -233,24 +233,84 @@
       border-radius: 10px;
       margin-top: 40px;
     }
+
+    .animate-loop {
+  animation: floating 2s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+  }
+
+  @keyframes tada {
+  0% { transform: scale(1); }
+  10%, 20% { transform: scale(0.9) rotate(-3deg); }
+  30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+  40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0); }
+  }
+
+  .animate-tada {
+  animation: tada 1s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #d80032, 0 0 15px #d80032;
+  }
+  50% {
+    text-shadow: 0 0 15px #fff, 0 0 25px #dd2d4a, 0 0 35px #dd2d4a;
+  }
+}
+
+.glow-text {
+  animation: glow 1.8s ease-in-out infinite;
+  color: #d80032;
+}
+
+.animate-loop {
+  animation: floating 2s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+ .kotak {
+      width: 150px;
+      height: 150px;
+      background-color: salmon;
+      margin-bottom: 10px;
+    }
+
   </style>
 </head>
 <body>
+  
   <div class="card">
     <div class="card-header">
-      <img class="logo" src="https://www.biofarma.co.id/media/image/originals/post/2023/07/06/bf.png" alt="Bio Farma Logo" />
-      <div class="title"><br />
-        <h3>HUT BIO 135 TAHUN</h3>
-        <p class="subtitle">
+    <img class="logo" src="https://www.biofarma.co.id/media/image/originals/post/2023/07/06/bf.png" alt="Bio Farma Logo" />
+    
+  <!-- Ini elemen gambar -->
+  <img class="logo"><img src="elemen/135 Tahun Bio Farma Logo.png" alt="Logo" width="100">
+
+    <div class="title"><br>
+    <h3>HUT BIO 135 TAHUN</h3>
+    <p class="subtitle">
           Siap-siap untuk perayaan yang paling heboh! Kami telah menyiapkan banyak kejutan, keseruan, dan momen kebersamaan untuk seluruh tim Bio Farma.<br />
           Mari rayakan bersama-sama, karena <strong>#BioFarma: The Only One Forever</strong>
-        </p>
-      </div>
-      <div class="info">
+    </p>
+
+  </div>
+  <div class="info">
         <p><strong>🗓️ Tanggal Acara:</strong> Rabu, 6 Agustus 2025</p>
         <p><strong>🕐 Waktu Acara:</strong> Pukul 13.00 – 17.00 WIB</p>
       </div>
-    </div>
+      </div>
 
     <div class="countdown">
       <div class="countdown-item"><h1 id="days">--</h1><span>Days</span></div>
@@ -259,74 +319,75 @@
       <div class="countdown-item"><h1 id="seconds">--</h1><span>Seconds</span></div>
     </div>
 
-    <div class="register-button">
-      <button onclick="handleRegisterClick()">Daftar Sekarang</button>
-    </div>
+  <div class="register-button">
+     <button class="animate-tada" onclick="handleRegisterClick()">Daftar Sekarang</button>
+     </div>
 
-    <!-- Aturan -->
-    <div class="rules" data-aos="flip-left">
-      <h2>🏁 YUK, SIMAK ATURAN MAINNYA 🏁</h2>
+  <div class="rules" data-aos="zoom-in-up">
+      <h1>🏁 YUK, SIMAK ATURAN MAINNYA 🏁</h1>
       <div class="timeline">
-        <div class="timeline__event" data-aos="fade-up-left">
-          <div class="timeline__event__icon">📝</div>
-          <div class="timeline__event__date">1</div>
-          <div class="timeline__event__content">
-            <h3 class="timeline__event__title">📌 Pendaftarannya gampang banget cuma 2 langkah aja nihh</h3>
-            <div class="timeline__event__description">
-              <p>1. Registrasi: Klik link undangan dari Email atau WhatsApp</p>
-              <p>2. Check-in: Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)</p>
-            </div>
-          </div>
+        <div class="timeline__event" data-aos="zoom-in-left">
+        <div class="timeline__event__icon">📝</div>
+        <div class="timeline__event__date">1</div>
+        <div class="timeline__event__content">
+        <h3 class="timeline__event__title">📌Pendaftarannya gampang banget cuma 2 langkah aja nihh</h3>
+        <div class="timeline__event__description">
+        <p>1. Registrasi: Klik link undangan dari Email atau WhatsApp</p>
+        <p>2. Check-in: Di venue saat Hari H (06 Agustus 2025 pukul 12.30 – 14.00)</p>
         </div>
-        <div class="timeline__event" data-aos="fade-up-left">
-          <div class="timeline__event__icon">🎉</div>
-          <div class="timeline__event__date">2</div>
-          <div class="timeline__event__content">
-            <h3 class="timeline__event__title">📌 Siap-siap dapat doorprize menarik</h3>
-            <div class="timeline__event__description">
-              <p>Setiap peserta yang sudah daftar otomatis masuk undian doorprize loh 🎁</p>
-              <p>Panitia undi secara random, dan yang beruntung bisa dapet hadiah kece!</p>
-            </div>
-          </div>
         </div>
-        <div class="timeline__event" data-aos="fade-up-left">
-          <div class="timeline__event__icon">😎</div>
-          <div class="timeline__event__date">3</div>
-          <div class="timeline__event__content">
-            <h3 class="timeline__event__title">📌 Mau hadiah lebih besar?</h3>
-            <div class="timeline__event__description">
-              <p>Jika kamu sudah registrasi + check-in, kamu bisa ikutan GRANDPRIZE 🎁</p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Alasan -->
+     <div class="timeline__event" data-aos="zoom-in-left">
+        <div class="timeline__event__icon">🎉</div>
+        <div class="timeline__event__date">2</div>
+        <div class="timeline__event__content">
+        <h3 class="timeline__event__title">📌 Siap-siap dapat doorprize menarik</h3>
+        <div class="timeline__event__description">
+        <p>Setiap peserta yang sudah daftar otomatis masuk undian doorprize loh 🎁</p>
+        <p>Panitia undi secara random, dan yang beruntung bisa dapet hadiah kece!</p>
+        </div>
+        </div>
+        </div>
+
+     <div class="timeline__event" data-aos="zoom-in-left">
+        <div class="timeline__event__icon">😎</div>
+        <div class="timeline__event__date">3</div>
+        <div class="timeline__event__content">
+        <h3 class="timeline__event__title">📌 Mau hadiah lebih besar?</h3>
+        <div class="timeline__event__description">
+        <p>Jika kamu sudah registrasi + check-in, kamu bisa ikutan GRANDPRIZE 🎁</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+    <div class="reasons-section" data-aos="">
+    <div class="title">
     <h2>Kenapa Harus Datang🤔...?</h2>
-    <div class="reasons-section" data-aos="flip-left">
       <div class="reasons-grid">
-        <div class="reason-card" data-aos="fade-up-left">• Acaranya seru banyak hadiah</div>
-        <div class="reason-card" data-aos="fade-up-left">• Bervibes positif penuh kejutan</div>
-        <div class="reason-card" data-aos="fade-up-left">• Banyak games seru yang bikin happy bareng</div>
-        <div class="reason-card" data-aos="fade-up-left">• Moment kebersamaan yang sangat terasa</div>
-        <div class="reason-card" data-aos="fade-up-left">• Bangun solidaritas dan kekompakan tinggi</div>
-        <div class="reason-card" data-aos="fade-up-left">• Penampilan spesial & hiburan memorable</div>
-        <div class="reason-card" data-aos="fade-up-left">• Seru-seruan bareng teman dari berbagai divisi</div>
-        <div class="reason-card" data-aos="fade-up-left">• Kenang-kenangan eksklusif dari "HUT BIO FARMA ke-135"</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Acaranya seru banyak hadiah</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Bervibes positif penuh kejutan</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Banyak games seru yang bikin happy bareng</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Moment kebersamaan yang sangat terasa</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Bangun solidaritas dan kekompakan tinggi</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Penampilan spesial & hiburan memorable</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Seru-seruan bareng teman dari berbagai divisi</div>
+        <div class="reason-card" data-aos="zoom-in-left">• Kenang-kenangan eksklusif dari "HUT BIO FARMA ke-135"</div>
       </div>
-      <div class="reasons-closing">
-        <b>Ayo Rayakan Momen Indah Bersejarah Bareng Tim Bio Farma</b>
+
+       <div class="reasons-closing">
+      <b class="glow-text">Ayo Rayakan Momen Indah Bersejarah Bareng Tim Bio Farma</b>
       </div>
-      <div class="reasons-quote">
+   <div class="reasons-quote">
         🔊 Karena Bio Farma tuh... <strong>GAK ADA 2NYA!</strong>
       </div>
-    </div>
+      </div>
 
     <div class="footer">HUT BIO FARMA 135 TAHUN</div>
-  </div>
+      </div>
 
-  <!-- Countdown Script -->
   <script>
     const eventDate = new Date("August 6, 2025 13:00:00").getTime();
     function updateCountdown() {
