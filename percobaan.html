@@ -11,7 +11,7 @@
       margin: 0;
       padding: 40px 20px;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(45deg, #ffde59, #ff914d, #42caff, #61e256);
+      background: linear-gradient(45deg, #ffcc00, #ff690b, #02a2ff, #15ff00);
       background-size: 300% 300%;
       animation: retroBG 10s ease infinite;
       box-sizing: border-box;
@@ -20,11 +20,11 @@
     }
 
     @keyframes retroBG {
-      0% { background-position: 0% 50%; }
+      0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
+  
     .bg-deco {
       position: absolute;
       width: 90px;
@@ -39,32 +39,46 @@
       50% { transform: translateY(10px) rotate(-12deg); }
     }
 
-    .deco-left {
-      bottom: 30px;
-      left: 30px;
-      top: unset;
-      transform: rotate(-12deg);
-      opacity: 0.8;
-    }
+     .deco-left { bottom: 30px; left: 30px; transform: rotate(-12deg);}
+    .deco-right { top: 130px; right: 30px; transform: rotate(15deg); }
 
-    .deco-right {
-      top: 100px;
-      right: 30px;
-      transform: rotate(15deg);
-      opacity: 0.8;
-    }
 
     .card {
       position: relative;
       max-width: 1200px;
       margin: auto;
       background: hsl(0, 0%, 0%);
-      border: 4px double #11D3E6;
+      border: 4px double #eeff00;
       border-radius: 20px;
       padding: 30px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       z-index: 1;
     }
+
+    .judul-hut {
+      font-size: px;
+      font-family: 'Orbitron', sans-serif;
+      color: #89daff;
+      text-shadow: 2px 2px #fdfcdc, 5px 5px #3a0ca3;
+      text-align: center;
+      letter-spacing: 3px;
+      margin: 10px 0 11px;
+      animation: neonPulse 1.5s infinite alternate;
+    }
+
+     .deskripsi-hut {
+      font-size: 20px;
+      color: #ffffff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3), 0 0 8px #a0c8f5;
+      line-height: 1.6;
+      font-weight: bold;
+      text-align: center;
+      max-width: 800px;
+      margin: 30px auto 70px;
+    }
+
+
     .card-header {
   text-align: center;
   background: linear-gradient(135deg, #ffafcc, #bde0fe);
@@ -116,17 +130,17 @@
   }
 }
 
-
     .info {
       text-align: center;
-      background: #928aff;
+      background: #18ffec;
       color: #111;
       padding: 20px;
-      border: 3px dashed #ef476f;
+      border: 3px dashed #fcfcfc;
       border-radius: 16px;
       font-size: 16px;
       font-weight: bold;
       margin-top: 20px;
+      margin-bottom: -5px;
     }
 
     .countdown {
@@ -137,8 +151,8 @@
     }
 
     .countdown-item {
-      background: #ffffff;
-      border: 3px dotted #ff7a00;
+      background: #ffd900;
+      border: 3px dotted #ffffff;
       padding: 15px 25px;
       border-radius: 16px;
       text-align: center;
@@ -176,7 +190,7 @@
       border-radius: 50px;
       color: #000;
       font-size: 18px;
-      cursor: pointer;
+      cursor: pointer; 
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: bold;
@@ -185,10 +199,18 @@
     }
 
     .register-button button:hover {
-      background: linear-gradient(to right, #ef476f, #ff9a5a);
+      background: linear-gradient(to right, #ff406c, #ff8c45);
       transform: scale(1.05);
     }
 
+    @keyframes pulseLoop {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .loop-pulse {
+      animation: pulseLoop 1.8s ease-in-out infinite;
+    }
     .rules-list {
       display: flex;
       flex-direction: column;
@@ -196,12 +218,12 @@
     }
 
     .rules-item {
-      background: linear-gradient(135deg, #fff1f1, #ffd6a5);
-      border: 3px dashed #ff4d6d;
+      background: linear-gradient(135deg, #fff1f1, #ffffff);
+      border: 3px dashed #ffe600;
       padding: 20px;
       border-radius: 18px;
       font-size: 16px;
-      color: #590d22;
+      color: #000000;
       font-weight: bold;
       box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
@@ -218,22 +240,22 @@
     }
 
     .reasons-section {
-  background: #f8edeb;
-  padding: 20px 30px 30px 30px; /* Kurangi padding atas jadi 20px */
+  background: #000000;
+  padding: 20px 30px 30px 30px; 
   border-radius: 20px;
-  margin-top: 20px; /* Kalau mau lebih dekat ke elemen atasnya */
-  border: 4px ridge #8509be;
+  margin-top: 0%;
+  border: 4px ridge #ffffff;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 
    .reasons-section h4 {
   font-size: 24px;
-  color: #6a00f4;
+  color: #ffffff;
   text-align: center;
-  text-shadow: 2px 2px #fff;
+  text-shadow: 2px 2px #bfadff;
   margin-top: 0;
-  margin-bottom: 30px; /* Tambah jarak ke bawah tulisan */
+  margin-bottom: 30px;
 }
 
 
@@ -245,11 +267,11 @@
 
     .reason-card {
       background: linear-gradient(135deg, #ffd6ff, #e7c6ff);
-      border: 2px dashed #7209b7;
+      border: 2px dashed #600aff;
       padding: 20px;
       border-radius: 16px;
       font-size: 16px;
-      color: #3c096c;
+      color: #000000;
       text-align: center;
       font-weight: bold;
       box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
@@ -266,10 +288,10 @@
   margin-top: 30px;
   background: linear-gradient(135deg, #ff6f61, #fcd34d);
   color: #2b0a3d;
-  padding: 6px 12px; /* Ukuran kotak diperkecil */
-  border: 2px solid #6a00f4; /* Garis solid */
+  padding: 6px 12px;
+  border: 2px solid #6a00f4;
   border-radius: 10px;
-  font-size: 16px; /* Tetap seperti sebelumnya */
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.5px;
@@ -300,17 +322,17 @@
     .judul-hut {
   font-size: 56px;
   font-family: 'Orbitron', sans-serif;
-  color: #89daff;
-  text-shadow: 2px 2px #fdfcdc, 5px 5px #3a0ca3;
+  color: #ffffff;
+  text-shadow: 2px 2px #fdfcdc, 5px 5px #fffb00;
   text-align: center;
   letter-spacing: 3px;
-  margin: 30px 0 15px;
+  margin: 10px 0 15px;
   animation: neonPulse 1.5s infinite alternate;
 }
 
 .deskripsi-hut {
   font-size: 20px;
-  color: #ffffff;
+  color: #ececec;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3), 0 0 8px #a0c8f5;
   line-height: 1.6;
@@ -318,26 +340,47 @@
   text-align: center;
   max-width: 800px;
   margin: auto;
-  margin-bottom: 70px; /* tambahkan ini untuk memberi jarak ke bawah */
-  margin-top: 30px;
+  margin-bottom: 18px; 
+  margin-top: 5px;
 }
 
   </style>
 </head>
 <body>
+<div class="card">
+  <div style="
+    background-color: #1a1a1a;
+    padding: 25px 100px 5px 100px;
+    border: 2px dashed #11D3E6;
+    border-radius: 16px;
+    margin-bottom: 0px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  ">
+    <div style=" 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    ">
 
-  <div class="card">
-    <div style="background: #1a1a1a; padding: 15px 25px; border: 2px dashed #11D3E6; border-radius: 16px; margin-bottom: 30px;">
-      <div style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
-        <img src="Gambar/Logo_BioFarma.png" alt="Logo Biofarma" style="height: 60px;">
-        <img src="Gambar/Biond_Fast.png" alt="Logo BiondFest" style="height: 60px;">
-        <img src="Gambar/135_Tahun.png" alt="Logo 135 Tahun" style="height: 60px;">
-        <div style="font-size: 26px; color: #ffffff; font-weight: bold; text-shadow: 1px 1px #11D3E6;"></div>
-      </div>
+  <div style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    ">
+      <img src="Gambar/Logo_BioFarma.png" alt="Logo Biofarma" style="height: 60px;">
+      <img src="Gambar/Biond_Fast.png" alt="Logo BiondFest" style="height: 60px;">
+      <img src="Gambar/135_Tahun.png" alt="Logo 135 Tahun" style="height: 60px;">
     </div>
-
+  </div>
+</div>
     <div style="position: relative; height: 60px;">
-      <img src="Gambar/Elemen_8.png" alt="Elemen 8 Posisi Bawah Logo Kiri Atas" style="
+      <img src="Gambar/tangan-removebg-preview.png" alt="Elemen 8 Posisi Bawah Logo Kiri Atas" style="
         position: absolute;
         top: 0;
         left: 0;
@@ -349,12 +392,10 @@
       ">
     </div>
 
-    <!-- Gambar Dekoratif (hanya 2) -->
-    <img src="Gambar/Elemen_8.png" alt="Deco Kiri" class="bg-deco deco-left">
-    <img src="Gambar/Elemen_5.png" alt="Deco Kanan" class="bg-deco deco-right">
+    <img src="Gambar/Kanan-removebg-preview.png" alt="Deco Kanan" class="bg-deco deco-right">
 
     
-      <h3 class="judul-hut">HUT BIO 135 TAHUN</h3>
+      <h2 class="judul-hut">HUT BIO 135 TAHUN</h2>
       <p class="deskripsi-hut">
           Siap-siap untuk perayaan yang paling heboh! Kami telah menyiapkan banyak kejutan, keseruan, dan momen kebersamaan untuk seluruh tim Bio Farma.<br />
           Mari rayakan bersama-sama, karena <strong>#BioFarma: The Only One Forever</strong>
@@ -365,17 +406,18 @@
     </div>
 
     <div class="countdown">
-      <div class="countdown-item"><h1 id="days">--</h1><span>Days</span></div>
-      <div class="countdown-item"><h1 id="hours">--</h1><span>Hours</span></div>
-      <div class="countdown-item"><h1 id="minutes">--</h1><span>Minutes</span></div>
-      <div class="countdown-item"><h1 id="seconds">--</h1><span>Seconds</span></div>
-    </div>
+    <div class="countdown-item"><h1 id="days">--</h1><span>Days</span></div>
+    <div class="countdown-item"><h1 id="hours">--</h1><span>Hours</span></div>
+    <div class="countdown-item"><h1 id="minutes">--</h1><span>Minutes</span></div>
+    <div class="countdown-item"><h1 id="seconds">--</h1><span>Seconds</span></div>
+  </div>
 
     <div class="register-button">
       <img src="Gambar/Elemen_3.png" alt="Icon Biond" class="register-icon">
-      <button onclick="handleRegisterClick()">Daftar Sekarang</button>
+     <button class="loop-pulse">Daftar sekarang</button>
     </div>
 
+    
    <div class="reasons-section">
   <h4>🏁 YUK SIMAK ATURAN MAINNYA 🏁</h4>
   <div class="rules-list">
@@ -416,44 +458,39 @@
   </div>
 
   <script>
-    const eventDate = new Date("August 6, 2025 13:00:00").getTime();
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
+  const eventDate = new Date("August 6, 2025 13:00:00").getTime();
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
 
-      if (distance < 0) {
-        document.getElementById("days").innerText = "0";
-        document.getElementById("hours").innerText = "0";
-        document.getElementById("minutes").innerText = "0";
-        document.getElementById("seconds").innerText = "0";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+    if (distance < 0) {
+      document.getElementById("days").innerText = "0";
+      document.getElementById("hours").innerText = "0";
+      document.getElementById("minutes").innerText = "0";
+      document.getElementById("seconds").innerText = "0";
+      return;
     }
 
-    function handleRegisterClick() {
-      alert("Fitur pendaftaran belum aktif.");
-    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-    
-  </script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+  }
+
+  function handleRegisterClick() {
+    alert("Fitur pendaftaran belum aktif.");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 </script>
 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
