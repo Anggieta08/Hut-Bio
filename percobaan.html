@@ -9,6 +9,33 @@
  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 
   <style>
+  .background-floating {
+    position: fixed;
+    top: -5px;
+    left: -1px;
+    width: 220px;
+    z-index: 1;
+    pointer-events: none;
+    animation: floatY 6s ease-in-out infinite;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+  }
+
+ .background-floating-kanan {
+    position: fixed;
+    top: 20px;
+    right: -60px; 
+    width: 220px;
+    z-index: 1;
+    pointer-events: none;
+    animation: floatKanan 6s ease-in-out infinite;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+  }
+
+  @keyframes floatKanan {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+
     body {
       margin: 0;
       padding: 40px 20px;
@@ -43,6 +70,13 @@
 
      .deco-left { bottom: 30px; left: 30px; transform: rotate(-12deg);}
     .deco-right { top: 130px; right: 30px; transform: rotate(15deg); }
+
+  
+
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(12px); }
+  }
 
 
     .card {
@@ -366,11 +400,24 @@
     }
   </style>
 </head>
-
+<img src="Gambar/Elemen_10.png" alt="Lampu Dekorasi" class="background-floating" />
+<img src="Gambar/Elemen_6.png" class="background-floating-kanan" />
 <body>
 <div class="card">
+<img src="Gambar/lampu.png" alt="Lampu Tengah Kiri" style="
+  position: absolute;
+  top: 1150px;
+  left: -60px;
+  height: 100px;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(2px 3px 6px rgba(0,0,0,0.3));
+  animation: float 8s ease-in-out infinite;
+">
+
+
   <div style="
-    background-color: #1a1a1a;
+    background-color: #d9a20b;
     padding: 25px 100px 5px 100px;
     border-radius: 16px;
     margin-bottom: 0px;
@@ -393,9 +440,9 @@
       gap: 10px;
       flex-wrap: wrap;
     ">
-      <img src="Gambar/Logo_BioFarma.png" alt="Logo Biofarma" style="height: 60px;">
-      <img src="Gambar/Biond_Fast.png" alt="Logo BiondFest" style="height: 60px;">
-      <img src="Gambar/135_Tahun.png" alt="Logo 135 Tahun" style="height: 60px;">
+      <img src="Gambar/Logo_BioFarma.png" alt="Logo Biofarma" style="height: 100px;">
+      <img src="Gambar/Biond_Fast.png" alt="Logo BiondFest" style="height: 100px;">
+      <img src="Gambar/135_Tahun.png" alt="Logo 135 Tahun" style="height: 100px;">
     </div>
   </div>
 </div>
@@ -433,11 +480,10 @@
   </div>
 
     <div class="register-button">
-      <img src="Gambar/Elemen_3.png" alt="Icon Biond" class="register-icon">
+      <img src="Gambar/Tulang.png" alt="Icon Biond" class="register-icon">
      <button class="loop-pulse">Daftar sekarang</button>
     </div>
 
-    
    <div class="reasons-section">
   <h4>🏁 YUK SIMAK ATURAN MAINNYA 🏁</h4>
   <div class="rules-list">
