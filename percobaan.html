@@ -337,17 +337,17 @@
 
     .footer {
       margin-top: 30px;
-      background: linear-gradient(135deg, #ff5199, #fffd74);
-      color: #4e0177;
+      background: linear-gradient(135deg, #002A57, #d9a20b);
+      color: #ffffff;
       padding: 10px 20px;
-      border: 2px solid #6a00f4;
+      border: 2px solid #ffffff;
       border-radius: 20px;
       font-size: 20x;
       font-weight: bold;
       text-align: center;
       letter-spacing: 0.5px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      text-shadow: 1px 1px 1px #ffffff;
+      text-shadow: 1px 1px 1px #000000;
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
@@ -398,6 +398,32 @@
       margin-bottom: 18px; 
       margin-top: 5px;
     }
+
+.sosmed-footer {
+  background-color: #002A57;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 50px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #ffffff; /* warna khas Bio Farma */
+}
+
+.sosmed-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.sosmed-footer a:hover {
+  color: #ffffff; /* sedikit lebih gelap saat hover */
+}
+
+
   </style>
 </head>
 <img src="Gambar/Elemen_10.png" alt="Lampu Dekorasi" class="background-floating" />
@@ -517,12 +543,19 @@
   </div>
 </div>
 
+ 
+<footer class="sosmed-footer">
+  <p>Ikuti Media Sosial Kami! | 
+    <a href="https://www.instagram.com/biofarmaid/" target="_blank">Instagram</a> |
+    <a href="https://www.youtube.com/@biofarmaID" target="_blank">YouTube</a>
+  </p>
+</footer>
 
     <div class="footer">
       💬🔊 Ayo Rayakan Momen Bersejarah Bareng Tim BioFarma #Karena BioFarma tuh... GAK ADA 2NYA!
     </div>
   </div>
-
+ 
   <script>
   const eventDate = new Date("August 6, 2025 13:00:00").getTime();
   function updateCountdown() {
